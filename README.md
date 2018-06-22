@@ -1,4 +1,4 @@
-# bela-projects
+# BELA projects
 
 ----
 
