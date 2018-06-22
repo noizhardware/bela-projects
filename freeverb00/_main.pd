@@ -1,0 +1,61 @@
+#N canvas 917 531 911 475 10;
+#X obj 215 -62 ctlin;
+#X floatatom 185 -36 5 0 0 0 - - -;
+#X floatatom 220 -36 5 0 0 0 - - -;
+#X floatatom 255 -36 5 0 0 0 - - -;
+#X obj 202 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 202 58 \; pd dsp \$1;
+#X obj 202 11 loadbang;
+#X obj 228 336 dac~;
+#X obj 223 38 s lb;
+#X obj 269 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 246 208 freeverb~;
+#X obj 351 93 adc~;
+#X obj 432 111 osc~ 100;
+#X msg 485 272 print;
+#X text 548 271 - print the current values of the above parameters
+;
+#X text 561 294 - start/stop freeze of reverb tail \, using 1 or 0
+;
+#X text 565 315 - bypass the reverb processing \, using a 1 or 0;
+#X text 546 249 - level of unprocessed signal \, between 0 and 1 (default:
+0);
+#X text 550 228 - level of reverbed signal \, between 0 and 1 (default:
+0.3);
+#X text 572 183 - amount of damping of room's surfaces (default: 0.5)
+;
+#X text 554 207 - stereo width of reverb (default: 1);
+#X text 576 161 - size of the room to be simulated (default=0.85);
+#X msg 485 162 roomsize 1;
+#X msg 485 206 width 5;
+#X msg 485 228 wet 0.5;
+#X msg 485 250 dry 0.5;
+#X obj 514 108 r lb;
+#X msg 485 184 damping;
+#X msg 486 295 freeze;
+#X msg 485 316 bypass;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 6 0 8 0;
+#X connect 9 0 8 0;
+#X connect 10 0 7 0;
+#X connect 10 1 7 1;
+#X connect 11 0 10 0;
+#X connect 11 1 10 1;
+#X connect 22 0 10 0;
+#X connect 23 0 10 0;
+#X connect 24 0 10 0;
+#X connect 25 0 10 0;
+#X connect 26 0 22 0;
+#X connect 26 0 27 0;
+#X connect 26 0 23 0;
+#X connect 26 0 24 0;
+#X connect 26 0 25 0;
+#X connect 26 0 13 0;
+#X connect 26 0 28 0;
+#X connect 26 0 29 0;
