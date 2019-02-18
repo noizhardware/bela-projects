@@ -2,10 +2,9 @@
 
 ----
 
-Got really excited with the Bela Mini, just made my first working patch using externals "freeverb00", just a simple reverb.
+Got really excited with the Bela Mini, just made my first working patch using externals "freeverb00", a simple reverb.
+Using the latest version of the Bela firmware, available [here](https://github.com/BelaPlatform/Bela/archive/master.zip)
 
-at the moment I found that it works if you just put the externals in the same folder of the project.
-the externals must be compiled for linux, here https://github.com/critterandguitari/Organelle_pd_extra I found the puredata-extended externals all nice and compiled for linux!
+* The externals can be in the same folder of your project, or in /root/Bela/projects/pd-externals
+* The externals must be compiled for linux, here https://github.com/critterandguitari/Organelle_pd_extra I found the puredata-extended externals all nice and compiled for linux!
 
-### TODO:
-- find how to make the pd-externals folder work
